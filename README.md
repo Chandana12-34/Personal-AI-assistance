@@ -1,144 +1,143 @@
-# AI_Personal_Voice_Assistant_Using_Python
+AI Personal Voice Assistant - Luna
+Project Description
+Luna is an AI-powered personal voice assistant built using Python. It can interact with users through voice commands to perform a variety of tasks such as fetching information from the web, sending emails, playing music, taking photos, and managing system operations. Luna is designed to be highly customizable, with the ability to handle a wide range of user commands.
 
-A project to build an AI voice assistant using Python . The Voice assistant interacts with the humans to perform basic tasks.
+Features
+Luna voice assistant can perform the following tasks:
 
+Open Applications/Programs:
 
-### About G-One :
+Open MS Word, Notepad, Command Prompt, Calculator, File Explorer, etc.
+Web Operations:
 
-![AI FINAL](https://user-images.githubusercontent.com/51138087/93668051-f7c4af00-fa3e-11ea-9b17-5913e954795f.png)
+Open websites (e.g., YouTube, Gmail, Google).
+Play videos or music on YouTube.
+Search for content on the web (e.g., images or information).
+System Operations:
 
+Shutdown, restart, or log off the system.
+Take screenshots.
+Open and control specific browsers (Google Chrome, Firefox, Microsoft Edge).
+Mute and unmute system audio.
+Information Fetching:
 
-G-One is an AI personal voice assistant service built using Pychram. It can understand human speech and perform basic task designed by the client.
+Get the current weather forecast for a specified city.
+Fetch the latest news headlines.
+Fetch information from Wikipedia.
+Answer general knowledge and geographical questions.
+Email Functionality:
 
-When the user specify the appropriate trigger words , The G-One gets activated and executes the user commands.
+Send emails via Gmail.
+Miscellaneous Tasks:
 
+Tell the current time and date.
+Get jokes and random facts.
+Generate a random number.
+Fetch system info like CPU, memory, and battery status.
+Copy text from clipboard.
+Capture photos via webcam.
+Requirements
+Python: Version 3.7 or higher.
+Libraries:
+speech_recognition
+pyttsx3
+datetime
+wikipedia
+pywhatkit
+pyjokes
+pyautogui
+psutil
+pyperclip
+requests
+pyowm
+smtplib
+ecapture
+random
+ctypes
+win32api
+win32con
+You can install the required libraries using pip:
 
-G-One AI Voice assistant:"Loading your personal Assistant G-One....
-                          Hello, Good Morning" (Greets the user according to time)
+bash
+Copy
+pip install speechrecognition pyttsx3 wikipedia pywhatkit pyjokes pyautogui psutil pyperclip requests pyowm smtplib ecapture random ctypes pywin32
+Setup Instructions
+1. Clone the repository:
+bash
+Copy
+git clone https://github.com/yourusername/luna-assistant.git
+cd luna-assistant
+2. Install the required libraries:
+bash
+Copy
+pip install -r requirements.txt
+3. Set up the Weather API:
+Go to OpenWeatherMap and create an account.
+Generate an API key.
+Replace the placeholder in the code with your API key:
+python
+Copy
+owm = pyowm.OWM('your_owm_api_key')
+4. Set up Gmail for email functionality:
+Enable "Less Secure Apps" on your Gmail account or use OAuth2 authentication.
+Replace the email and password in the send_email function with your own Gmail credentials.
+Important: It's recommended to use environment variables or a configuration file to securely store your credentials.
+5. Run the assistant:
+bash
+Copy
+python luna_assistant.py
+Usage
+To activate Luna, simply speak any of the following commands:
 
+"Hey Luna, open YouTube."
+"Hey Luna, what is the time?"
+"Hey Luna, take a photo."
+"Hey Luna, send an email."
+"Hey Luna, what's the weather in New York?"
+The assistant will respond to your commands and perform the requested task.
 
+Example Commands
+Opening applications:
 
-### The implemented Voice assistant can perform the following tasks:
+"Open MS Word"
+"Open Notepad"
+"Open Chrome"
+Web-based tasks:
 
+"Search for butterfly images."
+"Play music on YouTube."
+"Open Gmail."
+General knowledge queries:
 
-1. Opens a wepage : Youtube , G-Mail , Google Chrome , StackOverflow 
-	
-	
-		Human : Hey G-One, Open Youtube
-		
-		
-2. Predicts time 
-	
-	
-		Human : Hey G-One , What is the time
-		
-		
-3.Fetch Top headlines from Times of India
-	
-         
-		Human:Hey G-One , what's the latest news?
-		
-		
-4. Captures a photo
-	
-  		
-		Human:Hey G-One, Take a photo
-		
-		
-5. Searches data from web
-	
-   		
-		Human: Hey G-One, Search Butterfly images from web
-		
-		
-6. Ask geographical and computational questions
-	
-  	 	
-		Human: Hey G-One, What is the capital of California? / Hey G-One what is Sin 90?
-		
-		
-7. Predict Weather of different Cities
-   		
-	
-		Human: Hey G-One , What is the weather likely now in Kerala?
-		
-	
-8. Abstarct necessary information from wikipedia
-	
-   		
-		Human: Hey G-One , Who is Bill Gates according to Wikipedia
-		
-		
-   The voice assistant abstarcts first 3 lines of wikipedia and gives the information to the user.
-	
-	
-9. Ask G-One about what task it can perform and who created it
-	
-   		
-	  	Human: Hey G-One, Who created you? / Hey G-One , What can you do
-		
-		
-10.Turn off your pc when required
-   		
+"What is the capital of California?"
+"Tell me a joke."
+"What is Sin 90?"
+System tasks:
 
-   		 Human: Hey G-One , Please turn off my PC
+"Shutdown the system."
+"Take a screenshot."
+"Tell me the time."
+Information fetching:
 
+"What's the weather in Paris?"
+"What's the latest news?"
+Contributing
+Fork the repository.
+Clone your forked repository.
+Create a new branch (git checkout -b feature-name).
+Make your changes.
+Commit your changes (git commit -am 'Add new feature').
+Push to your branch (git push origin feature-name).
+Open a pull request.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-
-### Libraries required to be installed using Pip Command:
-	
-	1.Json
-	
-	2.request
-	
-	3.Speech recognition
-	
- 	4.Pyttsx3
-	
-	5.Wikipedia
-	
-	6.Ecapture
-	
-	7.time
-	
-	8.Wolfram Alpha
-
-
-### In-Built libraries required to be imported:
-
-	1.os
-	
-	2.datetime
-	
-	3.web browser
-	
-	4.subprocess
-
-
-
-G-One uses Third party API's to predict weather in different cities and to ask computational and geographical questions. 
-Free API keys can be generated by creating an account in the following applications.  
-	
-	Open Weather Map - To forecast weather
-	
-	WolframAlpha - To answer questions
-	
-
-
-
-### Check out my blog now :	
-
-A blog on "How to build your Own AI voice assistant using Python" is published on Towards Data science.
-
-[https://link.medium.com/RNuKoCjPO8](url)
-
-<p align="left">
-  <a href="https://medium.com/@mmirthula02" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="kushalbhanot" height="60" width="45" /></a> &nbsp;&nbsp;
-</p>
-
-
-
-Happy reading:)
-
-
-
+Acknowledgments
+Special thanks to the following libraries and services:
+Pyttsx3
+Speech Recognition
+PyOWM
+Wikipedia
+PyWhatKit
+Note
+Be sure to replace any sensitive information (like API keys and credentials) before sharing or deploying your code. Always keep security in mind when working with external APIs and services.
